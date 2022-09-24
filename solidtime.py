@@ -18,16 +18,7 @@ def create_table():
             type text
         )"""
     )
-    
 
-def crear_registro(dni, epoch, type):
-    connection = sql.connect("solidtime.db")
-    cursor = connection.cursor()
-    instruction = f"INSERT INTO control VALUES ({dni}, {epoch}, '{type}')"
-    cursor.execute(instruction)
-    connection.commit()
-    connection.close()
-    
     
 def registro_entrada(dni):
     connection = sql.connect("solidtime.db")
